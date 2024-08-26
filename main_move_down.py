@@ -31,7 +31,7 @@ while True:
 
     gray2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
     diff = cv2.absdiff(gray1, gray2)
-    _, thresh = cv2.threshold(diff, 50, 255, cv2.THRESH_BINARY)
+    _, thresh = cv2.threshold(diff, 30, 255, cv2.THRESH_BINARY)
     kernel = np.ones((3, 3), np.uint8)
     dilated = cv2.dilate(thresh, kernel, iterations=2)
 
@@ -57,6 +57,7 @@ while True:
     cv2.putText(frame2, f'Snow count: {snow_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
     cv2.putText(frame2, f'Average snow count: {int(snow_count_sum / count)}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 214, 0), 2)
     cv2.imshow('frame', frame2)
+    cv2.imshow('black&white', thresh)
     
     count += 1
 

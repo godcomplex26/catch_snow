@@ -5,6 +5,14 @@ name = "pypi"
 
 [packages]
 opencv-python = "*"
+python-dotenv = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"] }
+aiofiles = "*"
+pydantic = "*"
+python-jose = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
+sqlmodel = "*"
 
 [dev-packages]
 
