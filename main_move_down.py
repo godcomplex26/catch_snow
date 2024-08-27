@@ -8,8 +8,8 @@ def get_center(contour):
     return int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"])
 
 def is_snow(flake):
-    min_area = 64
-    max_area = 1000
+    min_area = 32
+    max_area = 2000
     area = cv2.contourArea(flake)
     return min_area <= area <= max_area
 

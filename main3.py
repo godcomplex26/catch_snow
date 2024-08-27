@@ -22,7 +22,7 @@ def is_snow(flake, color_img):
 
     return True
 
-video_file = 'snow2.mp4'
+video_file = 'snow.mp4'
 cap = cv2.VideoCapture(video_file)
 
 _, frame1 = cap.read()

@@ -7,7 +7,7 @@ name = "pypi"
 opencv-python = "*"
 python-dotenv = "*"
 fastapi = "*"
-uvicorn = {extras = ["standard"] }
+uvicorn = "*"  # `standard` 옵션을 제거하여 uvloop 설치를 피합니다.
 aiofiles = "*"
 pydantic = "*"
 python-jose = "*"
