@@ -13,6 +13,9 @@ pydantic = "*"
 python-jose = "*"
 passlib = {extras = ["bcrypt"], version = "*"}
 sqlmodel = "*"
+pyserial = "*"
+pystray = "*"
+requests = "*"
 
 [dev-packages]
 
