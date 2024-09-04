@@ -407,7 +407,7 @@ def setup_tray():
     image = base64_to_image(encoded_image)
     # image = create_image(64, 64, 'black', 'white')
     menu = Menu(MenuItem('Exit', on_quit))
-    icon = Icon("test_icon", image, "snow-detector", menu)
+    icon = Icon("icon", image, "snow-detector", menu)
     icon.run()
 
 if __name__=="__main__":
