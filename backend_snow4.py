@@ -362,6 +362,7 @@ def shutdown_server():
     FastAPI 앱을 종료하는 엔드포인트
     """
     def shutdown():
+        time.sleep(1)
         os.kill(os.getpid(), signal.SIGTERM)  # 현재 프로세스에 SIGTERM 신호를 보냄
     
     threading.Thread(target=shutdown).start()  # 별도의 스레드에서 종료 명령 실행
@@ -407,7 +408,7 @@ def setup_tray():
     image = base64_to_image(encoded_image)
     # image = create_image(64, 64, 'black', 'white')
     menu = Menu(MenuItem('Exit', on_quit))
-    icon = Icon("icon", image, "snow-detector", menu)
+    icon = Icon("test_icon", image, "snow-detector", menu)
     icon.run()
 
 if __name__=="__main__":
